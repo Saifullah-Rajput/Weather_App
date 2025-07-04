@@ -1,0 +1,43 @@
+.cloud {
+  position: absolute;
+  background: #fff;
+  background: radial-gradient(circle at 30% 30%, #fff 30%, #f0f0f0 100%);
+  border-radius: 50%;
+  width: 120px;
+  height: 60px;
+  top: 20%; /* adjust for placement */
+  left: 0;
+  opacity: 0.8;
+  animation: moveClouds 60s linear infinite;
+}
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  background: radial-gradient(circle at 30% 30%, #fff 30%, #f0f0f0 100%);
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 10px;
+}
+
+.cloud::after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 60px;
+}
+
+@keyframes moveClouds {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}

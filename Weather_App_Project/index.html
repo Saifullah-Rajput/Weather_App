@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Cloud_look.css">
+</head>
+<body>
+
+  <!-- Cloud background (optional) -->
+  <div class="cloud"></div>
+  <div class="cloud" style="top: 40%; animation-delay: 20s; opacity: 0.6;"></div>
+  <div class="cloud" style="top: 70%; animation-delay: 40s; opacity: 0.4;"></div>
+
+  <div class="weather-container">
+    <h1>🌤️ Weather App</h1>
+
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button id="searchBtn">Search</button>
+      <button id="resetBtn">Back</button> <!-- Back button -->
+    </div>
+
+    <!-- Weather output -->
+    <div id="weatherContent">
+      <h2 id="city">City</h2>
+      <h3 id="temp">-- °C</h3>
+      <p id="desc">Description</p>
+
+      <h3>Hourly Forecast</h3>
+      <div id="hourly"></div>
+
+      <h3>Daily Forecast</h3>
+      <div id="daily"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
