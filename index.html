@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MeteoTrack | SkyCast</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Main Weather Container (Simple Interface) -->
+  <main class="weather-container main-view">
+    <header>
+      <h1><i class="fas fa-cloud-sun"></i> MeteoTrack </h1>
+      <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city name..." spellcheck="false" autocomplete="off" />
+        <button id="searchBtn">
+          <i class="fas fa-search"></i> Search
+        </button>
+        <button id="forecastToggleBtn" class="secondary-btn">
+          <i class="fas fa-chart-line"></i> Forecast
+        </button>
+        <button id="resetBtn" class="secondary-btn">
+          <i class="fas fa-arrow-left"></i> Reset
+        </button>
+      </div>
+    </header>
+
+    <div id="weatherContent">
+      <div class="main-display">
+        <h2 id="city">Track And Monitor Weather Conditions</h2> <!-- Added id="city" -->
+        <div class="temp-container">
+          <h3 id="temp">--</h3>
+        </div>
+        <p id="desc">
+          <i class="fas fa-search"></i> Search for a city to see weather
+        </p>
+        <div class="weather-details">
+          <div class="detail-item">
+            <i class="fas fa-wind"></i>
+            <span>Wind: <span id="wind">-- km/h</span></span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-tint"></i>
+            <span>Humidity: <span id="humidity">--%</span></span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-temperature-high"></i>
+            <span>Feels: <span id="feelsLikeMain">--°</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="quick-forecast" id="quickForecast">
+       
+      </div>
+      
+      <p class="instruction-text">
+        <i class="fas fa-circle"></i> Enter a city and click Search for weather forecast
+        <br>
+        <i class="fas fa-circle"></i> 
+      </p>
+    </div> -->
+    
+    <!-- Forecast Container INSIDE main container -->
+    <div id="forecastContainer" class="forecast-container">
+      <div class="close-forecast" id="closeForecast">
+        <i class="fas fa-times"></i>
+      </div>
+      <h2><i class="fas fa-chart-line"></i> Weather Forecast</h2>
+      
+      <div class="forecast-content">
+        <!-- Current Weather Summary -->
+        <div id="currentWeatherSummary">
+          <!-- Current weather will be inserted here -->
+        </div>
+        
+        <!-- Hourly Forecast -->
+        <div class="forecast-section">
+          <h3><i class="fas fa-clock"></i> Hourly Forecast</h3>
+          <div class="forecast-cards-container" id="hourlyForecast">
+            <!-- Forecast cards will be empty by default -->
+            <div class="empty-state">
+              <i class="fas fa-cloud-sun"></i>
+              <p>Search for a city to see hourly forecast</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Daily Forecast -->
+        <div class="forecast-section">
+          <h3><i class="fas fa-calendar-alt"></i> Daily Forecast</h3>
+          <div class="forecast-cards-container" id="dailyForecast">
+            <!-- Forecast cards will be empty by default -->
+            <div class="empty-state">
+              <i class="fas fa-calendar"></i>
+              <p>Search for a city to see daily forecast</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Additional weather info -->
+        <div class="additional-info">
+          <div class="info-card">
+            <i class="fas fa-sunrise"></i>
+            <div>
+              <span class="info-label">Sunrise</span>
+              <span id="sunrise" class="info-value">--:--</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-sunset"></i>
+            <div>
+              <span class="info-label">Sunset</span>
+              <span id="sunset" class="info-value">--:--</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-temperature-high"></i>
+            <div>
+              <span class="info-label">Feels Like</span>
+              <span id="feelsLike" class="info-value">--°</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-compress-alt"></i>
+            <div>
+              <span class="info-label">Pressure</span>
+              <span id="pressure" class="info-value">-- hPa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer> © 2026 | By Saifulah Rajput</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
